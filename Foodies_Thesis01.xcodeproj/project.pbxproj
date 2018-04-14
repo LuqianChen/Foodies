@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FF6989DE2F0527D6E6F7E7 /* Pods_Foodies_Thesis01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6F4050083E0FD8EBDEC6A7 /* Pods_Foodies_Thesis01.framework */; };
 		843FF5E2207FBEF600220DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF5E1207FBEF600220DAF /* AppDelegate.swift */; };
-		843FF5E4207FBEF600220DAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF5E3207FBEF600220DAF /* ViewController.swift */; };
 		843FF5E7207FBEF600220DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FF5E5207FBEF600220DAF /* Main.storyboard */; };
 		843FF5E9207FBEF600220DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843FF5E8207FBEF600220DAF /* Assets.xcassets */; };
 		843FF5EC207FBEF600220DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FF5EA207FBEF600220DAF /* LaunchScreen.storyboard */; };
+		843FF5F9207FDA3300220DAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843FF5F8207FDA3300220DAF /* GoogleService-Info.plist */; };
+		843FF5FB207FDD1000220DAF /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF5FA207FDD1000220DAF /* welcomeViewController.swift */; };
+		843FF5FD207FDD2D00220DAF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF5FC207FDD2D00220DAF /* RegisterViewController.swift */; };
+		843FF5FF207FDD3D00220DAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF5FE207FDD3D00220DAF /* LoginViewController.swift */; };
+		843FF601207FDDDF00220DAF /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF600207FDDDF00220DAF /* AddItemViewController.swift */; };
+		843FF6072080489000220DAF /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF6052080489000220DAF /* NewTableViewCell.swift */; };
+		843FF6082080489000220DAF /* NewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FF6062080489000220DAF /* NewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		118B38FE520FFCD82D773394 /* Pods-Foodies_Thesis01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies_Thesis01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodies_Thesis01/Pods-Foodies_Thesis01.debug.xcconfig"; sourceTree = "<group>"; };
 		843FF5DE207FBEF600220DAF /* Foodies_Thesis01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodies_Thesis01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843FF5E1207FBEF600220DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		843FF5E3207FBEF600220DAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		843FF5E6207FBEF600220DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		843FF5E8207FBEF600220DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843FF5EB207FBEF600220DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843FF5ED207FBEF600220DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843FF5F8207FDA3300220DAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		843FF5FA207FDD1000220DAF /* welcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		843FF5FC207FDD2D00220DAF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		843FF5FE207FDD3D00220DAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		843FF600207FDDDF00220DAF /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		843FF6052080489000220DAF /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
+		843FF6062080489000220DAF /* NewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCell.xib; sourceTree = "<group>"; };
+		CF6F4050083E0FD8EBDEC6A7 /* Pods_Foodies_Thesis01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodies_Thesis01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A6CEBD80719BF0642D191A /* Pods-Foodies_Thesis01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies_Thesis01.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodies_Thesis01/Pods-Foodies_Thesis01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FF6989DE2F0527D6E6F7E7 /* Pods_Foodies_Thesis01.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032428E51CC1CB0549155B7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF6F4050083E0FD8EBDEC6A7 /* Pods_Foodies_Thesis01.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5119905E701CCF4747DF7486 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				118B38FE520FFCD82D773394 /* Pods-Foodies_Thesis01.debug.xcconfig */,
+				E0A6CEBD80719BF0642D191A /* Pods-Foodies_Thesis01.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		843FF5D5207FBEF500220DAF = {
 			isa = PBXGroup;
 			children = (
 				843FF5E0207FBEF600220DAF /* Foodies_Thesis01 */,
 				843FF5DF207FBEF600220DAF /* Products */,
+				5119905E701CCF4747DF7486 /* Pods */,
+				032428E51CC1CB0549155B7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +90,52 @@
 		843FF5E0207FBEF600220DAF /* Foodies_Thesis01 */ = {
 			isa = PBXGroup;
 			children = (
-				843FF5E1207FBEF600220DAF /* AppDelegate.swift */,
-				843FF5E3207FBEF600220DAF /* ViewController.swift */,
-				843FF5E5207FBEF600220DAF /* Main.storyboard */,
+				843FF602208047EA00220DAF /* Cell */,
+				843FF5F7207FC43E00220DAF /* Controller */,
+				843FF5F6207FC43200220DAF /* View */,
+				843FF5F5207FC42200220DAF /* Model */,
 				843FF5E8207FBEF600220DAF /* Assets.xcassets */,
 				843FF5EA207FBEF600220DAF /* LaunchScreen.storyboard */,
 				843FF5ED207FBEF600220DAF /* Info.plist */,
+				843FF5F8207FDA3300220DAF /* GoogleService-Info.plist */,
 			);
 			path = Foodies_Thesis01;
+			sourceTree = "<group>";
+		};
+		843FF5F5207FC42200220DAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		843FF5F6207FC43200220DAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				843FF5E5207FBEF600220DAF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		843FF5F7207FC43E00220DAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				843FF5E1207FBEF600220DAF /* AppDelegate.swift */,
+				843FF5FA207FDD1000220DAF /* welcomeViewController.swift */,
+				843FF5FC207FDD2D00220DAF /* RegisterViewController.swift */,
+				843FF5FE207FDD3D00220DAF /* LoginViewController.swift */,
+				843FF600207FDDDF00220DAF /* AddItemViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		843FF602208047EA00220DAF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				843FF6052080489000220DAF /* NewTableViewCell.swift */,
+				843FF6062080489000220DAF /* NewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 843FF5F0207FBEF600220DAF /* Build configuration list for PBXNativeTarget "Foodies_Thesis01" */;
 			buildPhases = (
+				CDAF22F6D13269A1B3C209D3 /* [CP] Check Pods Manifest.lock */,
 				843FF5DA207FBEF600220DAF /* Sources */,
 				843FF5DB207FBEF600220DAF /* Frameworks */,
 				843FF5DC207FBEF600220DAF /* Resources */,
+				7559698E42D113EF38DE6269 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				843FF5EC207FBEF600220DAF /* LaunchScreen.storyboard in Resources */,
+				843FF5F9207FDA3300220DAF /* GoogleService-Info.plist in Resources */,
+				843FF6082080489000220DAF /* NewCell.xib in Resources */,
 				843FF5E9207FBEF600220DAF /* Assets.xcassets in Resources */,
 				843FF5E7207FBEF600220DAF /* Main.storyboard in Resources */,
 			);
@@ -131,13 +209,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7559698E42D113EF38DE6269 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Foodies_Thesis01/Pods-Foodies_Thesis01-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Haneke/Haneke.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foodies_Thesis01/Pods-Foodies_Thesis01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDAF22F6D13269A1B3C209D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foodies_Thesis01-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		843FF5DA207FBEF600220DAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843FF5E4207FBEF600220DAF /* ViewController.swift in Sources */,
+				843FF601207FDDDF00220DAF /* AddItemViewController.swift in Sources */,
+				843FF5FF207FDD3D00220DAF /* LoginViewController.swift in Sources */,
+				843FF5FD207FDD2D00220DAF /* RegisterViewController.swift in Sources */,
+				843FF6072080489000220DAF /* NewTableViewCell.swift in Sources */,
 				843FF5E2207FBEF600220DAF /* AppDelegate.swift in Sources */,
+				843FF5FB207FDD1000220DAF /* welcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +409,7 @@
 		};
 		843FF5F1207FBEF600220DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 118B38FE520FFCD82D773394 /* Pods-Foodies_Thesis01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +425,7 @@
 		};
 		843FF5F2207FBEF600220DAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0A6CEBD80719BF0642D191A /* Pods-Foodies_Thesis01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
