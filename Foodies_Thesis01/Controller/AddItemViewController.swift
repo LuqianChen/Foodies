@@ -38,16 +38,15 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
         
-        let messageArray = ["1111","222","333"]
-        
-        cell.messageBody.text = messageArray[indexPath.row]
+        cell.messageBody.text = messageArray[indexPath.row].messageBody
+        cell.senderUsername.text = messageArray[indexPath.row].sender
         
         return cell
         
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return messageArray.count
     }
     
     
@@ -116,7 +115,9 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
             message.messageBody = text
             message.sender = sender
             
+            self.messageArray.append(message)
             
+            self.ItemTableView.reloadData()
             
         }
         
