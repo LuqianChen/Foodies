@@ -9,9 +9,12 @@
 import UIKit
 import Firebase
 
-class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
-    
+    var messageArray : [Message] = [Message]()
+
+    @IBOutlet weak var cleanButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var AddTextfield: UITextField!
     @IBOutlet weak var ItemTableView: UITableView!
     
@@ -20,6 +23,8 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         ItemTableView.delegate = self
         ItemTableView.dataSource = self
+        
+        AddTextfield.delegate = self
         
         ItemTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier:"customMessageCell")
         
@@ -44,6 +49,17 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        heightConstraint.constant = 500
+//        view.layoutIfNeeded()
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+    }
+    
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +68,30 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    @IBAction func sendPressed(_ sender: Any) {
+        
+        AddTextfield.endEditing(true)
+        
+        AddTextfield.isEnabled = false
+        sendButton.isEnabled = false
+        
+        let messageDB = Database.database().reference().child("Message")
+        let messageDictionary = ["sender": Auth.auth().currentUser?.email, "MessageBody": AddTextfield.text!]
+        
+        messageDB.childByAutoId().setValue(messageDictionary){
+            (error, reference) in
+            if error != nil {
+                print(error!)
+            }else{
+                print("Message saved successfully")
+                
+                self.AddTextfield.isEnabled = true
+                self.sendButton.isEnabled = true
+                self.AddTextfield.text = ""
+            }
+        }
+        
+    }
     
     @IBAction func LogoutPressed(_ sender: Any) {
         

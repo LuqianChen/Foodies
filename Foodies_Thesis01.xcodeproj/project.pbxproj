@@ -19,6 +19,7 @@
 		843FF601207FDDDF00220DAF /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF600207FDDDF00220DAF /* AddItemViewController.swift */; };
 		843FF635208280FE00220DAF /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF633208280FE00220DAF /* CustomMessageCell.swift */; };
 		843FF636208280FE00220DAF /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FF634208280FE00220DAF /* MessageCell.xib */; };
+		843FF63820828E4200220DAF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF63720828E4200220DAF /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		843FF600207FDDDF00220DAF /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		843FF633208280FE00220DAF /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		843FF634208280FE00220DAF /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		843FF63720828E4200220DAF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CF6F4050083E0FD8EBDEC6A7 /* Pods_Foodies_Thesis01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodies_Thesis01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A6CEBD80719BF0642D191A /* Pods-Foodies_Thesis01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies_Thesis01.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodies_Thesis01/Pods-Foodies_Thesis01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 		843FF5F5207FC42200220DAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				843FF63720828E4200220DAF /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				843FF5FD207FDD2D00220DAF /* RegisterViewController.swift in Sources */,
 				843FF5E2207FBEF600220DAF /* AppDelegate.swift in Sources */,
 				843FF5FB207FDD1000220DAF /* welcomeViewController.swift in Sources */,
+				843FF63820828E4200220DAF /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
