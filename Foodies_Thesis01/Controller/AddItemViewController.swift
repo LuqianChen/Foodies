@@ -126,6 +126,14 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
+    @IBAction func cleanPressed(_ sender: Any) {
+        
+        let myDatabase = Database.database().reference()
+        
+        myDatabase.setValue("")
+        self.ItemTableView.reloadData()
+        
+    }
     
     
     @IBAction func LogoutPressed(_ sender: Any) {
