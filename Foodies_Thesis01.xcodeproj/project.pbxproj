@@ -17,8 +17,8 @@
 		843FF5FD207FDD2D00220DAF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF5FC207FDD2D00220DAF /* RegisterViewController.swift */; };
 		843FF5FF207FDD3D00220DAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF5FE207FDD3D00220DAF /* LoginViewController.swift */; };
 		843FF601207FDDDF00220DAF /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF600207FDDDF00220DAF /* AddItemViewController.swift */; };
-		843FF6072080489000220DAF /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF6052080489000220DAF /* NewTableViewCell.swift */; };
-		843FF6082080489000220DAF /* NewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FF6062080489000220DAF /* NewCell.xib */; };
+		843FF635208280FE00220DAF /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF633208280FE00220DAF /* CustomMessageCell.swift */; };
+		843FF636208280FE00220DAF /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843FF634208280FE00220DAF /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		843FF5FC207FDD2D00220DAF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		843FF5FE207FDD3D00220DAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		843FF600207FDDDF00220DAF /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
-		843FF6052080489000220DAF /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
-		843FF6062080489000220DAF /* NewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCell.xib; sourceTree = "<group>"; };
+		843FF633208280FE00220DAF /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
+		843FF634208280FE00220DAF /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		CF6F4050083E0FD8EBDEC6A7 /* Pods_Foodies_Thesis01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodies_Thesis01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A6CEBD80719BF0642D191A /* Pods-Foodies_Thesis01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies_Thesis01.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodies_Thesis01/Pods-Foodies_Thesis01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,12 +90,11 @@
 		843FF5E0207FBEF600220DAF /* Foodies_Thesis01 */ = {
 			isa = PBXGroup;
 			children = (
-				843FF602208047EA00220DAF /* Cell */,
+				843FF6322082809D00220DAF /* CustomCell */,
 				843FF5F7207FC43E00220DAF /* Controller */,
 				843FF5F6207FC43200220DAF /* View */,
 				843FF5F5207FC42200220DAF /* Model */,
 				843FF5E8207FBEF600220DAF /* Assets.xcassets */,
-				843FF5EA207FBEF600220DAF /* LaunchScreen.storyboard */,
 				843FF5ED207FBEF600220DAF /* Info.plist */,
 				843FF5F8207FDA3300220DAF /* GoogleService-Info.plist */,
 			);
@@ -112,6 +111,7 @@
 		843FF5F6207FC43200220DAF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				843FF5EA207FBEF600220DAF /* LaunchScreen.storyboard */,
 				843FF5E5207FBEF600220DAF /* Main.storyboard */,
 			);
 			path = View;
@@ -129,13 +129,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		843FF602208047EA00220DAF /* Cell */ = {
+		843FF6322082809D00220DAF /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				843FF6052080489000220DAF /* NewTableViewCell.swift */,
-				843FF6062080489000220DAF /* NewCell.xib */,
+				843FF633208280FE00220DAF /* CustomMessageCell.swift */,
+				843FF634208280FE00220DAF /* MessageCell.xib */,
 			);
-			path = Cell;
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +201,8 @@
 			files = (
 				843FF5EC207FBEF600220DAF /* LaunchScreen.storyboard in Resources */,
 				843FF5F9207FDA3300220DAF /* GoogleService-Info.plist in Resources */,
-				843FF6082080489000220DAF /* NewCell.xib in Resources */,
 				843FF5E9207FBEF600220DAF /* Assets.xcassets in Resources */,
+				843FF636208280FE00220DAF /* MessageCell.xib in Resources */,
 				843FF5E7207FBEF600220DAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,10 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843FF635208280FE00220DAF /* CustomMessageCell.swift in Sources */,
 				843FF601207FDDDF00220DAF /* AddItemViewController.swift in Sources */,
 				843FF5FF207FDD3D00220DAF /* LoginViewController.swift in Sources */,
 				843FF5FD207FDD2D00220DAF /* RegisterViewController.swift in Sources */,
-				843FF6072080489000220DAF /* NewTableViewCell.swift in Sources */,
 				843FF5E2207FBEF600220DAF /* AppDelegate.swift in Sources */,
 				843FF5FB207FDD1000220DAF /* welcomeViewController.swift in Sources */,
 			);
