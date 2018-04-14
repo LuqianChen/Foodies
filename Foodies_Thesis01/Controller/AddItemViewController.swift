@@ -28,6 +28,8 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         ItemTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier:"customMessageCell")
         
+        retrieveMessage()
+        
 //        ItemTableView.register(UINib(nibName: "NewTableViewCell", bundle:nil), forCellReuseIdentifier: "NewCell")
         
         // Do any additional setup after loading the view.
@@ -76,7 +78,7 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         sendButton.isEnabled = false
         
         let messageDB = Database.database().reference().child("Message")
-        let messageDictionary = ["sender": Auth.auth().currentUser?.email, "MessageBody": AddTextfield.text!]
+        let messageDictionary = ["Sender": Auth.auth().currentUser?.email, "MessageBody": AddTextfield.text!]
         
         messageDB.childByAutoId().setValue(messageDictionary){
             (error, reference) in
@@ -92,6 +94,38 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
     }
+    
+    
+    func retrieveMessage(){
+        
+        let messageDB = Database.database().reference().child("Message")
+        
+        
+        
+        messageDB.observe(.childAdded) { (snapshot) in
+            
+            
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            
+            let text = snapshotValue["MessageBody"]!
+            let sender = snapshotValue["Sender"]!
+            
+            print(text, sender)
+            
+            let message = Message()
+            message.messageBody = text
+            message.sender = sender
+            
+            
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
     
     @IBAction func LogoutPressed(_ sender: Any) {
         
