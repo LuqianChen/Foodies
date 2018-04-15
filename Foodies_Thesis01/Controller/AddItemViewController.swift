@@ -12,11 +12,15 @@ import Firebase
 class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     var messageArray : [Message] = [Message]()
+    var ItemArray : [String] = []
+    var Items : String = ""
 
     @IBOutlet weak var cleanButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var AddTextfield: UITextField!
     @IBOutlet weak var ItemTableView: UITableView!
+    
+    @IBOutlet weak var showItems: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,9 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         ItemTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier:"customMessageCell")
         
         retrieveMessage()
+        
+      
+    
         
 //        ItemTableView.register(UINib(nibName: "NewTableViewCell", bundle:nil), forCellReuseIdentifier: "NewCell")
         
@@ -117,6 +124,11 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             self.messageArray.append(message)
             
+            self.ItemArray.append(text)
+            
+            self.Items = self.ItemArray.joined(separator: "+")
+            self.showItems.text = self.Items
+            
             self.ItemTableView.reloadData()
             
         }
@@ -148,6 +160,12 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "recipe"{
+            let RecipeVC = segue.destination as! RecipeViewController
+            RecipeVC.data = Items
+        }
+    }
 
     /*
     // MARK: - Navigation
