@@ -109,7 +109,6 @@
                                 </state>
                                 <connections>
                                     <action selector="LoginPressed:" destination="9bp-rl-aNB" eventType="touchUpInside" id="NWI-7I-DBZ"/>
-                                    <segue destination="oo6-wA-NVc" kind="show" identifier="goToAdd" id="P1C-sf-r10"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,6 +119,7 @@
                         <outlet property="LoginButton" destination="WRA-8i-UoY" id="G5b-FM-zED"/>
                         <outlet property="emailTextfeild" destination="nC2-UG-CwY" id="RuI-Cd-dUd"/>
                         <outlet property="passwordTextfeild" destination="EEe-Rm-75M" id="fbk-m0-Od0"/>
+                        <segue destination="oo6-wA-NVc" kind="show" identifier="goToAdd" id="dhW-94-urR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIr-79-4HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,7 +176,6 @@
                                 </state>
                                 <connections>
                                     <action selector="registerPressed:" destination="Inn-sB-gA9" eventType="touchUpInside" id="RdX-dX-5dC"/>
-                                    <segue destination="oo6-wA-NVc" kind="show" identifier="goToAdd" id="QTn-kT-zoe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,6 +185,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="VAC-Uu-ukW" id="RAw-jk-5V8"/>
                         <outlet property="passwordTextfield" destination="dRJ-Jm-1ZP" id="8Tq-2t-eFo"/>
+                        <segue destination="oo6-wA-NVc" kind="show" identifier="goToAdd" id="LUl-by-ffD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHg-57-hyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,6 +312,23 @@
                                 <rect key="frame" x="122" y="267" width="131" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-rT-90g">
+                                <rect key="frame" x="22" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.032797170780000003" green="0.2934079819" blue="0.37340106870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oo6-wA-NVc" kind="show" id="cTY-wJ-WHo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHh-TK-f9L">
+                                <rect key="frame" x="57" y="458" width="265" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.8778565526008606" green="0.92578095197677612" blue="0.64560133218765259" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="udG-XL-CX3"/>
@@ -363,6 +380,6 @@
         <image name="cooking-featured-678x381" width="381" height="678"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QTn-kT-zoe"/>
+        <segue reference="cTY-wJ-WHo"/>
     </inferredMetricsTieBreakers>
 </document>

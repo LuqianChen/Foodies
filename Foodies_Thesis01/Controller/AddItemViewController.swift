@@ -143,6 +143,7 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         let myDatabase = Database.database().reference()
         
         myDatabase.setValue("")
+        messageArray = []
         self.ItemTableView.reloadData()
         
     }
