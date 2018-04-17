@@ -34,9 +34,25 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         retrieveMessage()
         
+        checkIfUserIsLoggedIn()
       
 
     }
+    
+    
+    func checkIfUserIsLoggedIn(){
+        if Auth.auth().currentUser?.uid == nil {
+            print("No User")
+        }else{
+            let uid = Auth.auth().currentUser?.uid
+            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: {(snapshot) in print(snapshot)}, withCancel: nil)
+        }
+        
+    }
+    
+    
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
