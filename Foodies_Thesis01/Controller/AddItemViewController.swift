@@ -35,11 +35,7 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         retrieveMessage()
         
       
-    
-        
-//        ItemTableView.register(UINib(nibName: "NewTableViewCell", bundle:nil), forCellReuseIdentifier: "NewCell")
-        
-        // Do any additional setup after loading the view.
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

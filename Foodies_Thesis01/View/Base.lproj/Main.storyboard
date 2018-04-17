@@ -178,12 +178,20 @@
                                     <action selector="registerPressed:" destination="Inn-sB-gA9" eventType="touchUpInside" id="RdX-dX-5dC"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1yQ-6m-wUI">
+                                <rect key="frame" x="47" y="133" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j8i-Ab-EEF"/>
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="VAC-Uu-ukW" id="RAw-jk-5V8"/>
+                        <outlet property="nameTextfield" destination="1yQ-6m-wUI" id="RRH-ED-FKz"/>
                         <outlet property="passwordTextfield" destination="dRJ-Jm-1ZP" id="8Tq-2t-eFo"/>
                         <segue destination="oo6-wA-NVc" kind="show" identifier="goToAdd" id="LUl-by-ffD"/>
                     </connections>
@@ -380,6 +388,6 @@
         <image name="cooking-featured-678x381" width="381" height="678"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cTY-wJ-WHo"/>
+        <segue reference="LUl-by-ffD"/>
     </inferredMetricsTieBreakers>
 </document>
