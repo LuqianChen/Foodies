@@ -48,7 +48,8 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             }
             
             //UPLOAD IMAGE
-            let storageRef = Storage.storage().reference().child("myImage.png")
+            let imageName = NSUUID().uuidString
+            let storageRef = Storage.storage().reference().child("\(imageName).png")
             
             if let uploadData = UIImagePNGRepresentation(self.profileImage.image!) {
                 
