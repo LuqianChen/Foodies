@@ -185,6 +185,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi4-g5-jCs">
+                                <rect key="frame" x="99" y="699" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Upload your profile image">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadImage:" destination="Inn-sB-gA9" eventType="touchUpInside" id="l3P-oc-Sxh"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTd-gP-v5j">
+                                <rect key="frame" x="122" y="518" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j8i-Ab-EEF"/>
@@ -193,6 +209,7 @@
                         <outlet property="emailTextfield" destination="VAC-Uu-ukW" id="RAw-jk-5V8"/>
                         <outlet property="nameTextfield" destination="1yQ-6m-wUI" id="RRH-ED-FKz"/>
                         <outlet property="passwordTextfield" destination="dRJ-Jm-1ZP" id="8Tq-2t-eFo"/>
+                        <outlet property="profileImage" destination="LTd-gP-v5j" id="IZK-oF-dwn"/>
                         <segue destination="oo6-wA-NVc" kind="show" identifier="goToAdd" id="LUl-by-ffD"/>
                     </connections>
                 </viewController>

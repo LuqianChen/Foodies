@@ -9,14 +9,13 @@
 import UIKit
 import Firebase
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var nameTextfield: UITextField!
-    
-    
+    @IBOutlet weak var profileImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +47,26 @@ class RegisterViewController: UIViewController {
                 return
             }
             
+            //UPLOAD IMAGE
+            let storageRef = Storage.storage().reference().child("myImage.png")
+            
+            if let uploadData = UIImagePNGRepresentation(self.profileImage.image!) {
+                
+                storageRef.putData(uploadData, metadata: nil, completion:{(metadata,error) in
+                   
+                    if error != nil{
+                        print(error)
+                        return
+                    }
+                    print(metadata)
+                })
+                
+            }
+            
+           
+            
+            
+            
             let ref = Database.database().reference(fromURL: "https://foodies01-5a329.firebaseio.com/")
             let usersReference = ref.child("users").child(uid)
             let values = ["name" : name, "email" : email]
@@ -65,14 +84,37 @@ class RegisterViewController: UIViewController {
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func uploadImage(_ sender: Any) {
+        
+        let imagePickerController = UIImagePickerController()
+        
+        imagePickerController.delegate = self
+        
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        imagePickerController.allowsEditing = false
+        
+        self.present(imagePickerController, animated: true, completion: nil)
+        
     }
-    */
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            print(info)
+            profileImage.image = image
+        } else {
+            
+            print("There was a problem getting image")
+            
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
 
 }

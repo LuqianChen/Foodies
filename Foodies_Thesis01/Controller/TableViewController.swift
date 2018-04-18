@@ -67,11 +67,13 @@ class TableViewController: UITableViewController {
         let user = users[indexPath.row]
         
         cell.textLabel?.text = user.name
+        cell.detailTextLabel?.text = user.email
         
         
            return cell
         
     }
+ 
     
 
   
