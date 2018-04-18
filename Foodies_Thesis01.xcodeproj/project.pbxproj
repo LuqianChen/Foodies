@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07FF6989DE2F0527D6E6F7E7 /* Pods_Foodies_Thesis01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6F4050083E0FD8EBDEC6A7 /* Pods_Foodies_Thesis01.framework */; };
+		84377CD72086C2B000FD0DC4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84377CD62086C2B000FD0DC4 /* TableViewController.swift */; };
 		843FF5E2207FBEF600220DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FF5E1207FBEF600220DAF /* AppDelegate.swift */; };
 		843FF5E7207FBEF600220DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FF5E5207FBEF600220DAF /* Main.storyboard */; };
 		843FF5E9207FBEF600220DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843FF5E8207FBEF600220DAF /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		118B38FE520FFCD82D773394 /* Pods-Foodies_Thesis01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodies_Thesis01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodies_Thesis01/Pods-Foodies_Thesis01.debug.xcconfig"; sourceTree = "<group>"; };
+		84377CD62086C2B000FD0DC4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		843FF5DE207FBEF600220DAF /* Foodies_Thesis01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodies_Thesis01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843FF5E1207FBEF600220DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		843FF5E6207FBEF600220DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				843FF5FC207FDD2D00220DAF /* RegisterViewController.swift */,
 				843FF5FE207FDD3D00220DAF /* LoginViewController.swift */,
 				843FF600207FDDDF00220DAF /* AddItemViewController.swift */,
+				84377CD62086C2B000FD0DC4 /* TableViewController.swift */,
 				843FF6392082C4E000220DAF /* RecipeViewController.swift */,
 			);
 			path = Controller;
@@ -281,6 +284,7 @@
 				843FF63A2082C4E000220DAF /* RecipeViewController.swift in Sources */,
 				843FF5E2207FBEF600220DAF /* AppDelegate.swift in Sources */,
 				843FF5FB207FDD1000220DAF /* welcomeViewController.swift in Sources */,
+				84377CD72086C2B000FD0DC4 /* TableViewController.swift in Sources */,
 				843FF63820828E4200220DAF /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

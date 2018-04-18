@@ -15,7 +15,7 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
     var ItemArray : [String] = []
     var Items : String = ""
 
-    @IBOutlet weak var cleanButton: UIButton!
+
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var AddTextfield: UITextField!
     @IBOutlet weak var ItemTableView: UITableView!
@@ -35,8 +35,14 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         retrieveMessage()
         
         checkIfUserIsLoggedIn()
+        
+        fetchUser()
       
 
+    }
+    
+    func fetchUser(){
+        
     }
     
     
@@ -45,7 +51,15 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("No User")
         }else{
             let uid = Auth.auth().currentUser?.uid
-            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: {(snapshot) in print(snapshot)}, withCancel: nil)
+            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: {(snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject]{
+                    self.showItems.text = dictionary["name"] as? String
+                }
+                
+                
+                
+            }, withCancel: nil)
         }
         
     }
@@ -139,7 +153,7 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.ItemArray.append(text)
             
             self.Items = self.ItemArray.joined(separator: "+")
-            self.showItems.text = self.Items
+           // self.showItems.text = self.Items
             
             self.ItemTableView.reloadData()
             
@@ -150,15 +164,15 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
-    @IBAction func cleanPressed(_ sender: Any) {
-        
-        let myDatabase = Database.database().reference()
-        
-        myDatabase.setValue("")
-        messageArray = []
-        self.ItemTableView.reloadData()
-        
-    }
+//    @IBAction func cleanPressed(_ sender: Any) {
+//
+//        let myDatabase = Database.database().reference()
+//
+//        myDatabase.setValue("")
+//        messageArray = []
+//        self.ItemTableView.reloadData()
+//
+//    }
     
     
     @IBAction func LogoutPressed(_ sender: Any) {
@@ -180,14 +194,6 @@ class AddItemViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

@@ -234,11 +234,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70615154160000004" green="1" blue="0.0621685347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Clean">
+                                <state key="normal" title="Users">
                                     <color key="titleColor" red="0.032797170780000003" green="0.2934079819" blue="0.37340106870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cleanPressed:" destination="oo6-wA-NVc" eventType="touchUpInside" id="ecv-ty-CP9"/>
+                                    <segue destination="5Qk-C2-uxR" kind="show" id="tpJ-k1-64j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUv-R1-Is8">
@@ -292,7 +292,6 @@
                     <connections>
                         <outlet property="AddTextfield" destination="2bQ-AR-PLT" id="3Cl-fU-iLD"/>
                         <outlet property="ItemTableView" destination="DsO-sg-3T1" id="pPo-lK-w5i"/>
-                        <outlet property="cleanButton" destination="xGP-4U-LOh" id="NZK-jv-E54"/>
                         <outlet property="sendButton" destination="mUv-R1-Is8" id="hJR-9e-ba4"/>
                         <outlet property="showItems" destination="4PV-Rh-Svv" id="CkK-xO-gxc"/>
                     </connections>
@@ -300,6 +299,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mye-xd-YNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2277.5999999999999" y="98.275862068965523"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Rli-wn-GHA">
+            <objects>
+                <tableViewController id="5Qk-C2-uxR" customClass="TableViewController" customModule="Foodies_Thesis01" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hya-ly-Ehq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="t59-Bc-epq">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t59-Bc-epq" id="izg-xU-ldl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Qk-C2-uxR" id="8pk-9A-NrN"/>
+                            <outlet property="delegate" destination="5Qk-C2-uxR" id="VS1-Uj-bhn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJW-bQ-WvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2769" y="-552"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="chd-gc-aar">
@@ -349,21 +376,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuc-EX-8al" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3224.8000000000002" y="103.44827586206897"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Se2-f5-AAj">
-            <objects>
-                <viewController id="hPQ-bc-pxZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EM-Zo-mkG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="SHD-uq-a2K"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdv-Hf-Waj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4106" y="109"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hjt-1c-XBU">
