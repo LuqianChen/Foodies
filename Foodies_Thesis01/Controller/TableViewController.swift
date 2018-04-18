@@ -10,7 +10,8 @@ import UIKit
 import Firebase
 
 class TableViewController: UITableViewController {
-
+    
+    var users = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +21,22 @@ class TableViewController: UITableViewController {
     func fetchUser(){
         Database.database().reference().child("users").observe(.childAdded, with:{(snapshot)in
             
-            print(snapshot)
+            if let dictionary = snapshot.value as? [String: AnyObject]{
+                
+                let user = User()
+                
+                print(snapshot)
+                
+                print(dictionary)
+                
+                user.setValuesForKeys(dictionary)
+                    
+                print(user.name, user.email)
+                    
+                }
+                        
+            
+          
             
         }, withCancel: nil)
         
