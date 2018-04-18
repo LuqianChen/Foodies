@@ -30,7 +30,21 @@ class TableViewController: UITableViewController {
                 print(dictionary)
                 
                 user.setValuesForKeys(dictionary)
-                    
+                
+//                user.name = dictionary["name"] as! String
+//                user.email = dictionary["email"] as! String
+                
+                self.users.append(user)
+                
+                DispatchQueue.global(qos: .background).async {
+                    // Background Thread
+                    DispatchQueue.main.async {
+                        // Run UI Updates or call completion block
+                        self.tableView.reloadData()
+                    }
+                }
+               
+                
                 print(user.name, user.email)
                     
                 }
@@ -43,14 +57,16 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return users.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "UserCell")
         
-           cell.textLabel?.text = "AAA"
+        let user = users[indexPath.row]
+        
+        cell.textLabel?.text = user.name
         
         
            return cell
