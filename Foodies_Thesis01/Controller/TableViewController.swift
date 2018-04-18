@@ -24,11 +24,7 @@ class TableViewController: UITableViewController {
             if let dictionary = snapshot.value as? [String: AnyObject]{
                 
                 let user = User()
-                
-                print(snapshot)
-                
-                print(dictionary)
-                
+
                 user.setValuesForKeys(dictionary)
                 
 //                user.name = dictionary["name"] as! String
@@ -69,12 +65,35 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text = user.email
         
+        cell.imageView?.image = UIImage(named: "")
+        
+        if let profileImageUrl = user.profileImageUrl {
+            let url = NSURL(string: profileImageUrl)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler:{(data, response, error) in
+                if error != nil{
+                    print(error)
+                    return
+                }
+                
+//                DispatchQueue.main.async {
+//                    cell.imageView?.image = UIImage(data: data!)
+//                }
+                
+                DispatchQueue.global(qos: .background).async {
+                    // Background Thread
+                    DispatchQueue.main.async {
+                        cell.imageView?.image = UIImage(data: data!)
+                    }
+                }
+             
+                
+            }).resume()
+            
+        }
         
            return cell
         
     }
  
-    
-
-  
 }
+
