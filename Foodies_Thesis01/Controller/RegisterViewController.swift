@@ -58,30 +58,36 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
                         print(error)
                         return
                     }
-                    print(metadata)
+                    
+                    if let profileImageUrl = metadata?.downloadURL()?.absoluteString{
+                        
+                        let values = ["name" : name, "email" : email, "profileImageUrl": profileImageUrl]
+                        self.registerUserIntoDatabaseWithUID(uid: uid, values: values as [String : AnyObject])
+                    }
+                    
                 })
                 
             }
             
-           
-            
-            
-            
-            let ref = Database.database().reference(fromURL: "https://foodies01-5a329.firebaseio.com/")
-            let usersReference = ref.child("users").child(uid)
-            let values = ["name" : name, "email" : email]
-            usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-                if err != nil {
-                    print(err)
-                    return
-                }
-                
-                print("Save user Success")
-                self.performSegue(withIdentifier: "goToAdd", sender: self)
-                
-            })
-            
         }
+        
+    }
+    
+    private func registerUserIntoDatabaseWithUID(uid:String, values: [String: AnyObject]){
+        
+        let ref = Database.database().reference(fromURL: "https://foodies01-5a329.firebaseio.com/")
+        let usersReference = ref.child("users").child(uid)
+//        let values = ["name" : name, "email" : email, "profileImageUrl": metadata.downloadUrl()]
+        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+            if err != nil {
+                print(err)
+                return
+            }
+            
+            print("Save user Success")
+            self.performSegue(withIdentifier: "goToAdd", sender: self)
+            
+        })
         
     }
     
